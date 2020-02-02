@@ -1116,6 +1116,8 @@
             // 
             // chartForecast
             // 
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisY.MajorGrid.Enabled = false;
             chartArea1.Name = "ChartArea1";
             this.chartForecast.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -1130,10 +1132,6 @@
             this.chartForecast.Size = new System.Drawing.Size(501, 300);
             this.chartForecast.TabIndex = 0;
             this.chartForecast.Text = "chart1";
-
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-
             // 
             // Main_Form
             // 

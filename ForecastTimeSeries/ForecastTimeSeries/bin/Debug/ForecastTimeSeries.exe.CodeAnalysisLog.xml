@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Targets>
+  <Target Name="C:\Users\Pankiv\Downloads\forecast-time-series-master\forecast-time-series-master\ForecastTimeSeries\ForecastTimeSeries\bin\Debug\ForecastTimeSeries.exe">
+   <Modules>
+    <Module Name="forecasttimeseries.exe">
+     <Namespaces>
+      <Namespace Name="ForecastTimeSeries">
+       <Types>
+        <Type Name="Main_Form" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ReadTestData()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-02-02 13:23:36Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Pankiv\Downloads\forecast-time-series-master\forecast-time-series-master\ForecastTimeSeries\ForecastTimeSeries" File="Main_Form.cs" Line="447">Объект "'testingFile'" можно удалять более одного раза в методе 'Main_Form.ReadTestData()'. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 447</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ReadTrainData()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-02-02 13:23:36Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Pankiv\Downloads\forecast-time-series-master\forecast-time-series-master\ForecastTimeSeries\ForecastTimeSeries" File="Main_Form.cs" Line="378">Объект "'trainingFile'" можно удалять более одного раза в методе 'Main_Form.ReadTrainData()'. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 378</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MatrixDeterminentZero" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2020-02-02 13:23:36Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Добавьте [Serializable] к 'MatrixDeterminentZero', так как этот тип реализует ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="MatrixDimensionException" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2020-02-02 13:23:36Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Добавьте [Serializable] к 'MatrixDimensionException', так как этот тип реализует ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="MatrixLibraryExceptions" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2020-02-02 13:23:36Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Добавьте [Serializable] к 'MatrixLibraryExceptions', так как этот тип реализует ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="MatrixNotSquare" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2020-02-02 13:23:36Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Добавьте [Serializable] к 'MatrixNotSquare', так как этот тип реализует ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="MatrixNullException" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2020-02-02 13:23:36Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Добавьте [Serializable] к 'MatrixNullException', так как этот тип реализует ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="MatrixSingularException" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2020-02-02 13:23:36Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Добавьте [Serializable] к 'MatrixSingularException', так как этот тип реализует ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="VectorDimensionException" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2020-02-02 13:23:36Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Добавьте [Serializable] к 'VectorDimensionException', так как этот тип реализует ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+   <Name>Пометьте типы ISerializable атрибутом SerializableAttribute</Name>
+   <Description>Интерфейс System.Runtime.Serialization.ISerializable дает возможность типу настраивать свою сериализацию, в то время как атрибут Serializable дает возможность исполняющей среде опознавать этот тип как сериализуемый.</Description>
+   <Resolution Name="Default">Добавьте [Serializable] к {0}, так как этот тип реализует ISerializable.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182350.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Не ликвидировать объекты несколько раз</Name>
+   <Description>Правильно реализованный метод Dispose может вызываться неоднократно без создания исключения. Однако такой гарантии нет, и чтобы предотвратить создание System.ObjectDisposedException, не следует вызывать метод Dispose для объекта более одного раза.</Description>
+   <Resolution Name="Default">Объект "{0}" можно удалять более одного раза в методе {1}. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 447</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Категория</String>
+  <String Key="Certainty">Достоверность</String>
+  <String Key="CollapseAll">Свернуть все</String>
+  <String Key="CheckId">ИД проверки</String>
+  <String Key="Error">Ошибка</String>
+  <String Key="Errors">ошибки</String>
+  <String Key="ExpandAll">Развернуть все</String>
+  <String Key="Help">Справка</String>
+  <String Key="Line">Строка</String>
+  <String Key="Messages">сообщения</String>
+  <String Key="LocationNotStoredInPdb">[расположение не сохранено в PDB]</String>
+  <String Key="Project">Проект</String>
+  <String Key="Resolution">Разрешение</String>
+  <String Key="Rule">Правило</String>
+  <String Key="RuleFile">Файл правил</String>
+  <String Key="RuleDescription">Описание правила</String>
+  <String Key="Source">Источник</String>
+  <String Key="Status">Состояние</String>
+  <String Key="Target">Цель</String>
+  <String Key="Warning">Предупреждение</String>
+  <String Key="Warnings">предупреждения</String>
+  <String Key="ReportTitle">Отчет по анализу кода</String>
+ </Localized>
+</FxCopReport>

@@ -11,6 +11,7 @@
     <AssemblyName>ForecastTimeSeries</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -50,7 +50,30 @@
     <StartupObject>ForecastTimeSeries.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>data-find.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -71,6 +94,7 @@
     <Compile Include="ARIMA_Model.Designer.cs">
       <DependentUpon>ARIMA_Model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="Forecast_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,7 +107,6 @@
     <Compile Include="Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="StatisticLib.cs" />
     <Compile Include="ARIMA.cs" />
     <Compile Include="MatrixLib.cs" />
     <Compile Include="Neural.cs" />
@@ -121,21 +144,26 @@
   <ItemGroup>
     <EmbeddedResource Include="ARIMA_Model.resx">
       <DependentUpon>ARIMA_Model.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AHead_Form.resx">
+      <DependentUpon>AHead_Form.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Forecast_Form.resx">
       <DependentUpon>Forecast_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AHead_Form.resx">
-      <DependentUpon>AHead_Form.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Plot_Form.resx">
       <DependentUpon>Plot_Form.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Test_Form.resx">
       <DependentUpon>Test_Form.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Train_Result.resx">
       <DependentUpon>Train_Result.cs</DependentUpon>
@@ -159,7 +187,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data-find.ico" />
+    <Content Include="ForecastTimeSeries.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,1 @@
+C:\Users\Pankiv\Downloads\forecast-time-series-master\forecast-time-series-master\ForecastTimeSeries\ForecastTimeSeries\obj\Release\ForecastTimeSeries.csprojAssemblyReference.cache
